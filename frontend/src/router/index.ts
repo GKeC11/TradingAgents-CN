@@ -70,6 +70,38 @@ const routes: RouteRecordRaw[] = [
     ]
   },
   {
+    path: '/funds',
+    name: 'Funds',
+    component: () => import('@/layouts/BasicLayout.vue'),
+    redirect: '/funds/search',
+    meta: {
+      title: '基金分析',
+      icon: 'TrendCharts',
+      requiresAuth: true,
+      transition: 'fade'
+    },
+    children: [
+      {
+        path: 'search',
+        name: 'FundSearch',
+        component: () => import('@/views/Funds/FundSearch.vue'),
+        meta: {
+          title: '基金分析',
+          requiresAuth: true
+        }
+      },
+      {
+        path: ':code',
+        name: 'FundDetail',
+        component: () => import('@/views/Funds/FundDetail.vue'),
+        meta: {
+          title: '基金详情',
+          requiresAuth: true
+        }
+      }
+    ]
+  },
+  {
     path: '/screening',
     name: 'StockScreening',
     component: () => import('@/layouts/BasicLayout.vue'),

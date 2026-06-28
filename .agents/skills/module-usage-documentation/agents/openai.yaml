@@ -1,0 +1,4 @@
+interface:
+  display_name: "模块使用文档"
+  short_description: "生成和维护模块、插件、框架集成或子系统的使用文档。"
+  default_prompt: "Use this skill to create or update a practical usage guide for a module, plugin, framework integration, reusable subsystem, or project convention."

@@ -16,6 +16,18 @@ from .stock_models import (
     CurrencyType,
     StockStatus
 )
+from .fund import (
+    FundSearchItem,
+    FundBasicInfo,
+    FundNavRecord,
+    FundPerformanceItem,
+    FundFeeInfo,
+    FundAssetAllocation,
+    FundStockHolding,
+    FundBondHolding,
+    FundHoldingsResponse,
+    FundDetailResponse
+)
 
 __all__ = [
     "StockBasicInfoExtended",
@@ -28,5 +40,15 @@ __all__ = [
     "MarketType",
     "ExchangeType",
     "CurrencyType",
-    "StockStatus"
+    "StockStatus",
+    "FundSearchItem",
+    "FundBasicInfo",
+    "FundNavRecord",
+    "FundPerformanceItem",
+    "FundFeeInfo",
+    "FundAssetAllocation",
+    "FundStockHolding",
+    "FundBondHolding",
+    "FundHoldingsResponse",
+    "FundDetailResponse"
 ]

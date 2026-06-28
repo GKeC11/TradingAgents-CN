@@ -31,6 +31,7 @@ from app.core.logging_config import setup_logging
 from app.routers import auth_db as auth, analysis, screening, queue, sse, health, favorites, config, reports, database, operation_logs, tags, tushare_init, akshare_init, baostock_init, historical_data, multi_period_sync, financial_data, news_data, social_media, internal_messages, usage_statistics, model_capabilities, cache, logs
 from app.routers import sync as sync_router, multi_source_sync
 from app.routers import stocks as stocks_router
+from app.routers import funds as funds_router
 from app.routers import stock_data as stock_data_router
 from app.routers import stock_sync as stock_sync_router
 from app.routers import multi_market_stocks as multi_market_stocks_router
@@ -691,6 +692,7 @@ app.include_router(screening.router, prefix="/api/screening", tags=["screening"]
 app.include_router(queue.router, prefix="/api/queue", tags=["queue"])
 app.include_router(favorites.router, prefix="/api", tags=["favorites"])
 app.include_router(stocks_router.router, prefix="/api", tags=["stocks"])
+app.include_router(funds_router.router, prefix="/api", tags=["funds"])
 app.include_router(multi_market_stocks_router.router, prefix="/api", tags=["multi-market"])
 app.include_router(stock_data_router.router, tags=["stock-data"])
 app.include_router(stock_sync_router.router, tags=["stock-sync"])

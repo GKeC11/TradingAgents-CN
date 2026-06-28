@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Thinking Partner"
+  short_description: "梳理现有流程，评估方案，并用设计原则追问架构取舍。"
+  default_prompt: "Use $design-thinking-partner to review an existing workflow change and challenge my proposed design."

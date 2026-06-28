@@ -27,6 +27,11 @@
       <el-menu-item index="/reports">分析报告</el-menu-item>
     </el-sub-menu>
 
+    <el-menu-item index="/funds">
+      <el-icon><TrendCharts /></el-icon>
+      <template #title>基金分析</template>
+    </el-menu-item>
+
     <el-menu-item index="/tasks">
       <el-icon><List /></el-icon>
       <template #title>任务中心</template>
@@ -118,7 +123,10 @@ import {
 const route = useRoute()
 const appStore = useAppStore()
 
-const activeMenu = computed(() => route.path)
+const activeMenu = computed(() => {
+  if (route.path.startsWith('/funds')) return '/funds'
+  return route.path
+})
 </script>
 
 <style lang="scss" scoped>

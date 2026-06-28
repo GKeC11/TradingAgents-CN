@@ -1,0 +1,4 @@
+interface:
+  display_name: "临时工作文档"
+  short_description: "整理当前工作的临时需求记录和实现流程"
+  default_prompt: "Use this skill to write or revise Docs/Temp temporary work documents as concise current-task records organized by implementation flow."
